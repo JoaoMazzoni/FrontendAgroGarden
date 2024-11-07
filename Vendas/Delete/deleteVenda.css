@@ -1,0 +1,587 @@
+/* Reset e estilos base */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background: #ffffff;
+  color: #333;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  height: 95px;
+}
+
+.top-nav {
+  background: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.top-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top-nav li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.top-nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.top-nav a:hover {
+  background: #e0e0e0;
+  color: #2b6a3a;
+}
+
+.top-nav i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  padding: 10px 15px;
+  width: 150px;
+  white-space: nowrap;
+  display: block;
+}
+
+.submenu a:hover {
+  background: #e0e0e0;
+  color: #2b6a3a;
+}
+
+/* Estilos para a visibilidade do submenu */
+.top-nav li.active .submenu {
+  display: block;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.home-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home-icon i {
+  font-size: 22px;
+  color: #2b6a3a;
+  margin-right: 8px;
+}
+
+.home-text {
+  font-size: 16px;
+  color: #2b6a3a;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.home-text:hover {
+  color: #1e4727;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.brand h1 {
+  font-size: 24px;
+  color: #2b6a3a;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.user-info {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  font-size: 22px;
+  color: #333;
+  margin-right: 10px;
+  margin-top: -3px;
+}
+
+.user-details {
+  text-align: right;
+}
+
+.username {
+  font-size: 18px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.user-type {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333;
+  margin-top: -20px;
+  margin-bottom: 1px;
+}
+
+.logout {
+  background: #2b6a3a;
+  color: white;
+  padding: 2px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 11px;
+  transition: background 0.3s ease;
+}
+
+.logout:hover {
+  background: #1e4727;
+}
+
+/* Estilos para o conteúdo principal */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+}
+
+.container h2 {
+  color: #2b6a3a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.table-container {
+  max-height: 150px;
+  max-width: 100%;
+  overflow-y: auto;
+  overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+}
+
+.report-table-container {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+  border: 10px solid #ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap; /* Evita quebra de linha no conteúdo das células */
+}
+
+th {
+  background-color: #2b6a3a;
+  color: white;
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: #2b6a3a;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.edit-icon:hover {
+  color: #1e4727;
+}
+
+.no-data-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+
+/* Estilos para o modal */
+.modal {
+  display: none; /* Oculto por padrão */
+  position: fixed; /* Fica no lugar */
+  z-index: 1; /* Fica por cima */
+  left: 0;
+  top: 0;
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  overflow: auto; /* Habilita rolagem se necessário */
+  background-color: rgba(0, 0, 0, 0.4); /* Fundo preto com opacidade */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% do topo e centralizado */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Pode ser mais ou menos, dependendo do tamanho da tela */
+  position: relative; /* Para posicionar o botão de fechar */
+}
+
+.modal-content h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2b6a3a;
+}
+
+.modal-content h2 i {
+  margin-right: 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+label i {
+  margin-right: 10px;
+  color: #2b6a3a;
+}
+
+input,
+select {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #2b6a3a;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #1e4727;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para o modal de sucesso */
+.success-modal {
+  display: none; /* Oculta a modal por padrão */
+  position: fixed; /* Fixa a modal na tela */
+  z-index: 1000; /* Garante que a modal fique acima de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ocupa 100% da largura da tela */
+  height: 100%; /* Ocupa 100% da altura da tela */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-modal-content {
+  background-color: #ffffff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px; /* Limita a largura máxima da modal */
+  height: 200px; /* Altura ajustada */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  position: fixed; /* Fixa a modal na tela */
+}
+
+.success-modal-content h2 {
+  color: #2b6a3a; /* Cor verde do título */
+  margin-bottom: 10px;
+}
+
+.success-modal-content p {
+  margin-bottom: 20px; /* Espaço entre o texto e o botão */
+  color: #333333; /* Cor do texto */
+}
+
+.success-modal-content .close-button {
+  background-color: #2b6a3a; /* Cor verde do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100px; /* Ajuste de largura do botão */
+  display: inline-block; /* Ajuste para centralização */
+  margin-top: 20px; /* Ajuste de margem superior */
+}
+
+.success-modal-content .close-button:hover {
+  background-color: #1e4727; /* Cor verde mais escura ao passar o mouse */
+}
+
+/* Estilos para o rodapé */
+footer {
+  background: #ffffff;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-content label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-content label i {
+  margin-right: 10px;
+  color: #2b6a3a;
+}
+
+/* Estilo do botão de PDF */
+.pdf-button {
+  background-color: #2b6a3a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+  background-color: #1e4727;
+}
+
+/* Estilos para a modal de confirmação */
+.confirm-modal {
+  display: none; /* Oculta a modal por padrão */
+  position: fixed; /* Fixa a modal na tela */
+  z-index: 1000; /* Garante que a modal fique acima de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ocupa 100% da largura da tela */
+  height: 100%; /* Ocupa 100% da altura da tela */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm-modal-content {
+  background-color: #ffffff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px; /* Limita a largura máxima da modal */
+  height: 200px; /* Altura ajustada */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.confirm-modal-content h2 {
+  color: #2b6a3a; /* Cor verde do título */
+  margin-bottom: 10px;
+}
+
+.confirm-modal-content p {
+  margin-bottom: 20px; /* Espaço entre o texto e o botão */
+  color: #333333; /* Cor do texto */
+}
+
+.confirm-modal-content .close-button,
+.confirm-modal-content .cancel-button,
+.confirm-modal-content .confirm-button {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 6px 15px;
+  border-radius: 6px;
+  display: inline-block; /* Ajuste para centralização */
+  margin-top: 20px; /* Ajuste de margem superior */
+}
+
+.confirm-modal-content .close-button {
+  background-color: #2b6a3a; /* Cor verde do botão */
+  color: white; /* Cor do texto do botão */
+  width: 100px; /* Ajuste de largura do botão */
+}
+
+.confirm-modal-content .close-button:hover {
+  background-color: #1e4727; /* Cor verde mais escura ao passar o mouse */
+}
+
+.confirm-modal-content .cancel-button {
+  background-color: #9b1709; /* Cor vermelha do botão */
+  color: white; /* Cor do texto do botão */
+  width: 120px; /* Ajuste de largura do botão */
+  margin-right: 10px; /* Ajuste de margem à direita */
+}
+
+.confirm-modal-content .cancel-button:hover {
+  background-color: #4c0b04; /* Cor vermelha mais escura ao passar o mouse */
+}
+
+.confirm-modal-content .confirm-button {
+  background-color: #2b6a3a; /* Cor verde do botão */
+  color: white; /* Cor do texto do botão */
+  width: 120px; /* Ajuste de largura do botão */
+}
+
+.confirm-modal-content .confirm-button:hover {
+  background-color: #1e4727; /* Cor verde mais escura ao passar o mouse */
+}
+
+#confirmModal {
+  display: none; /* Modal escondida por padrão */
+}
+
+/* Estilo do popup de sucesso */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.modal-content h2 {
+  color: #2b6a3a;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.modal-content .close {
+  background: #2b6a3a;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.modal-content .close:hover {
+  background: #1e4727;
+}

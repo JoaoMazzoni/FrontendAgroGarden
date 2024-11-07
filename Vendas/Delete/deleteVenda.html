@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listagem de Vendas - AgroGarden</title>
+    <link rel="stylesheet" href="deleteVenda.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="home-icon">
+          <a href="../../Menu/menu.html" class="home-text">
+            <i class="fas fa-home"></i> Início
+          </a>
+        </div>
+        <div class="brand">
+          <h1>AgroGarden</h1>
+        </div>
+        <div class="user-info">
+          <i class="fas fa-user user-icon"></i>
+          <div class="user-details">
+            <p class="username" id="username">Olá,</p>
+            <h6 class="user-type" id="user-type">Tipo de Usuário</h6>
+            <a href="../../Login/login.html" id="logout" class="logout">Sair</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="top-nav">
+      <ul>
+        <li id="plantacao">
+          <a href="#"><i class="fas fa-seedling"></i> Plantação</a>
+          <ul class="submenu">
+            <li>
+              <a href="../../Plantacao/Cadastrar/cadastrarPlantacao.html "
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li>
+              <a href="../../Plantacao/Delete/deletePlantacao.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a href="../../Plantacao/Relatorio/relatorioPlantacao.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+            <li>
+              <a href="../../Plantacao/Atualizar/editarPlantacao.html"
+                ><i class="fas fa-edit"></i> Atualizar</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li id="colheita">
+          <a href="#"><i class="fas fa-basket-shopping"></i> Colheita</a>
+          <ul class="submenu">
+            <li>
+              <a href="../../Colheita/Cadastro/cadastrarColheita.html"
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li>
+              <a href="../../Colheita/Delete/deleteColheita.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a href="../../Colheita/Relatorio/relatorioColheita.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+            <li>
+              <a href="../../Colheita/Atualizar/editarColheita.html"
+                ><i class="fas fa-edit"></i> Atualizar</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li id="fornecedores">
+          <a href="#"><i class="fas fa-truck"></i> Fornecedores</a>
+          <ul class="submenu">
+            <li>
+              <a href="../../Fornecedores/Cadastrar/cadastrarFornecedor.html"
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li>
+              <a href="../../Fornecedores/Delete/deleteFornecedor.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a href="../../Fornecedores/Relatorio/relatorioFornecedor.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+            <li>
+              <a href="../../Fornecedores/Atualizar/editarFornecedor.html"
+                ><i class="fas fa-edit"></i> Atualizar</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li id="insumos">
+          <a href="#"><i class="fas fa-box"></i> Insumos</a>
+          <ul class="submenu">
+            <li id="insumosCadastrar">
+              <a href="../../Insumos/Cadastro/cadastrarInsumo.html"
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li id="insumosDeletar">
+              <a href="../../Insumos/Delete/deleteInsumo.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a href="../../Insumos/Relatorio/relatorioInsumo.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+            <li>
+              <a href="../../Insumos/Atualizar/editarInsumo.html"
+                ><i class="fas fa-edit"></i> Atualizar</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li id="vendas">
+          <a href="#"><i class="fas fa-shopping-cart"></i> Vendas</a>
+          <ul class="submenu">
+            <li id="vendasCadastrar">
+              <a href="../../Vendas/Cadastro/cadastrarVenda.html"
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li id="vendasDeletar">
+              <a href="../../Vendas/Delete/deleteVenda.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a href="../../Vendas/Relatorio/relatorioVenda.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li id="usuarios">
+          <a href="#"><i class="fas fa-users"></i> Usuários</a>
+          <ul class="submenu">
+            <li>
+              <a href="../../Usuarios/Cadastro/cadastrarUsuario.html"
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li>
+              <a href="../../Usuarios/Delete/deleteUsuario.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a href="../../Usuarios/Relatorio/relatorioUsuario.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+            <li>
+              <a href="../../Usuarios/Atualizar/editarUsuario.html"
+                ><i class="fas fa-edit"></i> Atualizar</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li id="pragas">
+          <a href="#"><i class="fas fa-bug"></i> Pragas</a>
+          <ul class="submenu">
+            <li>
+              <a href="../../Pragas/Cadastrar/cadastrarPraga.html"
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li>
+              <a href="../../Pragas/Delete/deletePraga.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a href="../../Pragas/Relatorio/relatorioPraga.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+            <li>
+              <a href="../../Pragas/Atualizar/editPraga.html"
+                ><i class="fas fa-edit"></i> Atualizar</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li id="aplicacao-insumos">
+          <a href="#"><i class="fas fa-spray-can"></i> Aplicação de Insumos</a>
+          <ul class="submenu">
+            <li>
+              <a
+                href="../../AplicacaoInsumos/Cadastrar/cadastrarAplicacaoInsumos.html"
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../AplicacaoInsumos/Delete/deleteAplicacaoInsumos.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../AplicacaoInsumos/Relatorio/relatorioAplicacaoInsumos.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li id="produtos">
+          <a href="#"><i class="fas fa-carrot"></i> Produtos</a>
+          <ul class="submenu">
+            <li id="produtosCadastrar">
+              <a href="../../Produtos/Cadastrar/cadastrarProduto.html"
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li id="produtosDeletar">
+              <a href="../../Produtos/Delete/deleteProduto.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a href="../../Produtos/Relatorio/relatorioProduto.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+            <li id="produtosAtualizar">
+              <a href="../../Produtos/Atualizar/editProduto.html"
+                ><i class="fas fa-edit"></i> Atualizar</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li id="clientes">
+          <a href="#"><i class="fas fa-user"></i> Clientes</a>
+          <ul class="submenu">
+            <li>
+              <a href="../../Clientes/Cadastrar/cadastrarCliente.html"
+                ><i class="fas fa-plus"></i> Cadastrar</a
+              >
+            </li>
+            <li>
+              <a href="../../Clientes/Delete/deleteCliente.html"
+                ><i class="fas fa-trash"></i> Deletar</a
+              >
+            </li>
+            <li>
+              <a href="../../Clientes/Relatorio/relatorioCliente.html"
+                ><i class="fas fa-file-alt"></i> Relatório</a
+              >
+            </li>
+            <li>
+              <a href="../../Clientes/Atualizar/editCliente.html"
+                ><i class="fas fa-edit"></i> Atualizar</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <h2><i class="fas fa-trash-alt"></i> Cancelar Venda Ativa</h2>
+        <form id="searchForm">
+          <input type="text" id="searchId" placeholder="Pesquisar por ID" />
+          <button type="submit">Pesquisar</button>
+        </form>
+        <div id="aplicacoesTableContainer" class="report-table-container">
+          <!-- Tabela será preenchida dinamicamente aqui -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal de Confirmação -->
+    <div id="confirmModal" class="confirm-modal">
+      <div class="confirm-modal-content">
+        <h2>Confirmação</h2>
+        <p>Você tem certeza que deseja deletar esta venda?</p>
+        <p>Esta ação não poderá ser desfeita.</p>
+        <button class="cancel-button">Cancelar</button>
+        <button class="confirm-button">Confirmar</button>
+      </div>
+    </div>
+
+    <!-- Modal de Sucesso -->
+    <div id="successModal" class="success-modal">
+      <div class="success-modal-content">
+        <h2>Cancelamento Realizado!</h2>
+        <p>Venda cancelado com sucesso.</p>
+        <button class="close-button"><strong>FECHAR</strong></button>
+      </div>
+    </div>
+
+    <!-- Popup de erro -->
+    <div id="errorModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <h2><i class="fas fa-exclamation-circle"></i> Erro</h2>
+        <p id="errorMessage"></p>
+        <button class="close"><strong>FECHAR</strong></button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          <i class="fas fa-copyright"></i> 2024 AgroGarden. Todos os direitos
+          reservados.
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i> Contato: suporte.agrogarden@gmail.com
+        </p>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Rua da Colheita, 123 - Jardim
+          das Hortaliças, Araraquara-SP
+        </p>
+      </div>
+    </footer>
+
+    <script src="deleteVenda.js"></script>
+  </body>
+</html>

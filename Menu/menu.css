@@ -1,0 +1,170 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+header {
+  background: #ffffff;
+
+  color: #333;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 24px;
+  color: #2b6a3a;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  font-size: 22px;
+  color: #333;
+  margin-right: 10px;
+  margin-top: -3px;
+}
+
+.user-details {
+  text-align: right;
+}
+
+.username {
+  font-size: 18px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.user-type {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333;
+  margin-top: -20px;
+  margin-bottom: 1px;
+}
+
+.logout {
+  background: #2b6a3a;
+  color: white;
+  padding: 2px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 11px;
+  transition: background 0.3s ease;
+}
+
+.logout:hover {
+  background: #1e4727;
+}
+
+.top-nav {
+  background: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.top-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top-nav li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.top-nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.top-nav a:hover {
+  background: #e0e0e0;
+  color: #2b6a3a;
+}
+
+.top-nav i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  padding: 10px 15px;
+  width: 150px;
+  white-space: nowrap;
+  display: block;
+}
+
+.submenu a:hover {
+  background: #e0e0e0;
+  color: #2b6a3a;
+}
+
+/* Estilos para a visibilidade do submenu */
+.top-nav li.active .submenu {
+  display: block;
+}
+
+.logo-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+  opacity: 40%;
+}
+
+footer {
+  background: #ffffff;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}

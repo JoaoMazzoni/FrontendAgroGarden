@@ -1,0 +1,371 @@
+/* Reset e estilos base */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background: #ffffff;
+  color: #333;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  height: 95px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.home-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.exportBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.home-icon i {
+  font-size: 22px;
+  color: #2b6a3a;
+  margin-right: 8px;
+}
+
+.home-text {
+  font-size: 16px;
+  color: #2b6a3a;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.home-text:hover {
+  color: #1e4727;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.brand h1 {
+  font-size: 24px;
+  color: #2b6a3a;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.user-info {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  font-size: 22px;
+  color: #333;
+  margin-right: 10px;
+  margin-top: -3px;
+}
+
+.user-details {
+  text-align: right;
+}
+
+.username {
+  font-size: 18px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.user-type {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333;
+  margin-top: -20px;
+  margin-bottom: 1px;
+}
+
+.logout {
+  background: #2b6a3a;
+  color: white;
+  padding: 2px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 11px;
+  transition: background 0.3s ease;
+}
+
+.logout:hover {
+  background: #1e4727;
+}
+
+/* Estilos para o conteúdo principal */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.report-container {
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+}
+
+.report-container h2 {
+  color: #2b6a3a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  background: #2b6a3a;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-button:hover {
+  background: #1e4727;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.search-container button {
+  background: #2b6a3a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-container button:hover {
+  background: #1e4727;
+}
+
+.report-table-container {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap; /* Evita quebra de linha no conteúdo das células */
+}
+
+th {
+  background-color: #2b6a3a;
+  color: white;
+}
+
+footer {
+  background: #ffffff;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.no-data-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+
+.loading-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-mask p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.top-nav {
+  background: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.top-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top-nav li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.top-nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.top-nav a:hover {
+  background: #e0e0e0;
+  color: #2b6a3a;
+}
+
+.top-nav i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  padding: 10px 15px;
+  width: 150px;
+  white-space: nowrap;
+  display: block;
+}
+
+.submenu a:hover {
+  background: #e0e0e0;
+  color: #2b6a3a;
+}
+
+/* Estilos para a visibilidade do submenu */
+.top-nav li.active .submenu {
+  display: block;
+}
+
+/* Botão Gerar PDF */
+#generatePdfBtn {
+  background-color: #2b6a3a; /* Cor igual ao botão de filtro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+#generatePdfBtn:hover {
+  background-color: #1e4727; /* Cor de hover igual ao botão de filtro */
+}

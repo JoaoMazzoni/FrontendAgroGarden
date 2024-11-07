@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - AgroGarden</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <img
+          src="../Imagens/LogoAgroGarden.png"
+          alt="Logo AgroGarden"
+          class="logo"
+        />
+        <div class="login-text">
+          <h2>LOGIN</h2>
+        </div>
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" placeholder="Digite seu CPF" required />
+            <div id="cpfError" class="error-message"></div>
+          </div>
+          <div class="input-group password-group">
+            <label for="password">Senha</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Digite sua senha"
+              required
+            />
+            <i id="togglePassword" class="fas fa-seedling toggle-password"></i>
+            <div id="passwordError" class="error-message"></div>
+          </div>
+          <button type="submit" id="submitButton">
+            <span class="button-text">ENTRAR</span>
+            <div class="progress-bar"></div>
+          </button>
+        </form>
+
+        <div class="register-link">
+          <p></p>
+          <a href="../CadastroConta/cadastro.html">Criar uma conta</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Erro -->
+    <div id="errorModal" class="modal">
+      <div class="modal-content error">
+        <span class="close">&times;</span>
+        <h2>Erro de Autenticação</h2>
+        <p id="errorMessage"></p>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
