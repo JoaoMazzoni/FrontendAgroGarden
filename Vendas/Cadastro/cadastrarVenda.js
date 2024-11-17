@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (cliente.cnpj) {
         // Verifica se os dados existem
         const option = document.createElement("option");
-        option.value = cliente.cnpj + "-" + cliente.razaoSocial;
+        option.value = cliente.cnpj;
         option.textContent = `${cliente.cnpj + " - " + cliente.razaoSocial}`;
         clienteSelect.appendChild(option);
       } else {
@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
         atualizarListaProdutos();
       })
       .catch((error) => {
-        displayErrorModal("Erro ao cadastrar a venda");
+        displayErrorModal("Erro ao cadastrar a venda ");
       });
   });
 
