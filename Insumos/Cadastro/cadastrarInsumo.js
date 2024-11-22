@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } else {
         const errorMessage = await response.text();
-        displayErrorModal("Erro ao carregar fornecedores: " + errorMessage);
+        displayErrorModal("Não foi possível carregar os fornecedores: " + errorMessage);
       }
     } catch (error) {
       displayErrorModal("Erro ao se conectar ao servidor: " + error.message);

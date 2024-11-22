@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } else {
         const errorMessage = await response.text();
-        displayErrorModal("Erro ao carregar produtos: " + errorMessage);
+        displayErrorModal("Não há produtos cadastrados no momento.<br>");
       }
     } catch (error) {
       displayErrorModal("Erro ao se conectar ao servidor: " + error.message);

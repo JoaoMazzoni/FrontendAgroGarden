@@ -173,13 +173,15 @@ document.addEventListener("DOMContentLoaded", () => {
           tipoInsumo.value = insumo.funcao;
           tipoInsumo.innerText = insumo.funcao;
         } else {
-          displayErrorModal("Nenhuma insumo disponível.");
+          displayErrorModal("Nenhum insumo disponível.");
           document.getElementById("insumoId").innerHTML =
-            '<option value="">Nenhuma insumo incluida</option>';
+            '<option value="">Nenhum insumo incluido</option>';
         }
       } else {
         const errorMessage = await response.text();
-        displayErrorModal("Erro ao carregar insumos: " + errorMessage);
+        displayErrorModal(
+          "Não foi possível carregar os insumos: " + errorMessage
+        );
       }
     } catch (error) {
       displayErrorModal("Erro ao se conectar ao servidor: " + error.message);
@@ -286,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           displayErrorModal("Nenhuma insumo disponível.");
           document.getElementById("insumoId").innerHTML =
-            '<option value="">Nenhuma insumo incluida</option>';
+            '<option value="">Nenhum insumo incluida</option>';
         }
       } else {
         const errorMessage = await response.text();
@@ -309,13 +311,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (Array.isArray(plantacao) && plantacao.length > 0) {
           preencherDropdownPlantacao(plantacao);
         } else {
-          displayErrorModal("Nenhuma insumo disponível.");
+          displayErrorModal("Nenhum insumo disponível.");
           document.getElementById("plantacaoId").innerHTML =
             '<option value="">Nenhuma plantação incluida</option>';
         }
       } else {
         const errorMessage = await response.text();
-        displayErrorModal("Erro ao carregar plantação: " + errorMessage);
+        displayErrorModal(
+          "Não foi possível carregar as plantações. " + errorMessage
+        );
       }
     } catch (error) {
       displayErrorModal("Erro ao se conectar ao servidor: " + error.message);

@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       })
       .catch((error) => {
-        displayErrorModal("Erro ao buscar plantações ativas:", error);
+        displayErrorModal("Nenhuma plantação ativa encontrada", error);
       });
   }
 

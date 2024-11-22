@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } else {
         const errorMessage = await response.text();
-        displayErrorModal("Erro ao carregar plantação: " + errorMessage);
+        displayErrorModal("Nenhuma plantação foi encontrada " + errorMessage);
       }
     } catch (error) {
       displayErrorModal("Erro ao se conectar ao servidor: " + error.message);

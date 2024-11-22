@@ -137,7 +137,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } else {
         const errorMessage = await response.text();
-        displayErrorModal("Erro ao carregar colheitas: " + errorMessage);
+        displayErrorModal(
+          "Não há colheitas para gerarem produtos no momento.<br><br>" +
+            errorMessage
+        );
       }
     } catch (error) {
       displayErrorModal("Erro ao se conectar ao servidor: " + error.message);

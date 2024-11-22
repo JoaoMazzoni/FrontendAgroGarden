@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         populateTable(data);
       })
-      .catch((error) => console.error("Error fetching colheitas:", error));
+      .catch((error) => console.error("Error ao buscar colheitas:", error));
   }
 
   // Função para formatar data para dd/MM/yyyy
